@@ -1,0 +1,117 @@
+@charset "UTF-8";
+
+/*------------------------------------- MENU HEADER ------------------------------------------*/
+
+#menu_header {
+	margin:auto;
+	width:982px;
+	height:40px;
+}
+
+.TabMenuFirst {
+	width:195px;
+	border-left:1px solid #ffffff;
+}
+
+.TabMenu {
+	float:left;
+	font:13px Arial, Helvetica, sans-serif;
+	font-weight:bold;
+	color:#FFFFFF;
+	text-align:center;
+	padding-top:12px;
+	width:195px;
+	height:28px;
+	cursor:pointer;
+	border-right:1px solid #ffffff;
+}
+/*
+.TabMenu a:link {
+	color:#ffffff;
+	text-decoration: none;
+}
+.TabMenu a:visited {
+	color:#ffffff;
+	text-decoration: none;
+}
+.TabMenu a:hover {
+	color:#0f5390;
+	text-decoration: none;
+}
+*/
+.TabMenuHover:hover {
+	background:#5db0c8;
+	color:#0f5390;
+}
+
+
+/*------------------------------------- MENU PART DROITE ------------------------------------------*/
+
+#menu_part_droite {
+	margin:auto;
+	width:270px;
+	position:relative;
+}
+
+.fleche_menu {
+	background-image:url(../images/fleche_menu.png);
+	background-repeat:no-repeat;
+	padding-left:15px;
+	padding-right:6px;
+}
+
+.lien_menu_part_droite {
+	font:14px Arial, Helvetica, sans-serif;
+	font-weight:bold;
+	background:#5db0c8;
+	color:#ffffff;
+	text-align:left;
+	padding-left:12px;
+	padding-top:10px;
+	height:26px;
+	cursor:pointer;
+	border-bottom:2px solid #ffffff;
+}
+
+.lien_menu_part_droite_hover:hover {
+	background:#0f5390;
+	color:#ffffff;
+}
+
+
+
+/*----------------------------------- MENU FOOTER -----------------------------------*/
+
+#block-menu-secondary-links {
+	margin-top:20px;
+	padding-left:50px;
+}
+#block-menu-secondary-links a, #block-menu-secondary-links span {
+	display:block;
+	padding:2px;
+	padding:2px;
+	text-decoration:none;
+	-webkit-transition: all 200ms linear;
+    -moz-transition: all 200ms linear;
+    -o-transition: all 200ms linear;
+    -ms-transition: all 200ms linear;
+    transition: all 200ms linear;
+}
+#block-menu-secondary-links li {
+	list-style:none;
+	display:inline-block;
+	float:left;
+	border-right: solid 1px #5db0c8;
+	padding:0px;
+	margin:0px;
+	padding-right:4px;
+	padding-left:1px;
+}
+#block-menu-secondary-links li.last {
+	border-right: none;
+}
+
+#block-menu-secondary-links a:hover {
+	background:#5db0c8;
+	color:#FFFFFF;
+}

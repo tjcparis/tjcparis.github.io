@@ -1,0 +1,168 @@
+@charset "UTF-8";
+
+
+/*----------------------------- OBJECT --------------------------------*/
+
+#object_header {
+	width:100%;
+	height:150px; 
+}
+
+#object_footer {
+	width:100%;
+	height:351px; 
+}
+
+
+/*----------------------------- PART CENTRE --------------------------------*/
+
+.bandeau_grandtitre { 
+	float:left; 
+	width: 982px; 
+	margin-top:20px;
+	margin-bottom:-10px;
+	padding-left:20px;
+}
+
+#activites_txt {
+	float:left;
+	width:692px;
+}
+
+#activites_images {
+	float:right;
+	width:270px;
+}
+
+
+
+/*----------------------------- PART GAUCHE --------------------------------*/
+
+#bloc_actualites {
+	float:left;
+	width:692px;
+	padding-top:8px; 
+}
+
+.fleche_titre {
+	float:left;
+	width:15px;
+	margin-right:5px;
+	padding-top:3px;
+}
+
+#titre_lien {
+	float:left;
+	width:982px;
+	padding-left:20px;
+}
+.titre_lien {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:14px;
+	font-weight:bold;
+	color:#0f5390;
+	padding-top:20px;
+	padding-bottom:10px;
+}
+
+.titre_txt {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:18px;
+	font-weight:bold;
+	color:#0f5390;
+}
+
+.titre_txt_bleu {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:16px;
+	font-weight:bold;
+	color:#0f5390;
+	font-style:italic;
+}
+
+.stitre_txt {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:18px;
+	font-weight:bold;
+	color:#000000;
+	padding-top:12px;
+}
+
+.texte_txt {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:13px;
+	color:#000000;
+	padding-left:20px;
+	padding-top:2px;
+}
+
+.texte_txt_duree {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:13px;
+	color:#000000;
+	padding-top:2px;
+	padding-bottom:10px;
+}
+
+.texte_txt_desc {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:13px;
+	color:#000000;
+	padding-top:2px;
+}
+
+.texte_txt_bleu {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:13px;
+	color:#0f5390;
+	padding-top:2px;
+	font-style:italic;
+}
+
+.titre_txt_date {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:13px;
+	font-weight:bold;
+	color:#5db0c8;
+}
+
+.pointilles {
+	width:692px; 
+	margin-top:15px; 
+	margin-bottom:11px;
+}
+
+.pointilles_desc {
+	width:692px; 
+	margin-top:15px; 
+	margin-bottom:20px;
+}
+
+.pointilless {
+	width:982px; 
+	margin-top:15px; 
+	margin-bottom:15px;
+}
+
+
+
+
+
+/*----------------------------- PART DROITE --------------------------------*/
+
+#part_droite_blocs {
+	width:270px;
+}
+
+.bloc_droite_gauche {
+	float:left;
+	width:130px;
+	padding-top:10px;
+}
+
+.bloc_droite_droite {
+	float:right;
+	width:130px;
+	padding-top:10px;
+}
+

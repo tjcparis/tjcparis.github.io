@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Véritable Jésus Eglise</title>
+
+<link href="css/styles.css" rel="stylesheet" media="screen">
+<link href="css/menus.css" rel="stylesheet" media="screen">
+<link href="css/communs.css" rel="stylesheet" media="screen">
+
+<style type="text/css" media="screen">
+.slides_container {width:692px; height:299px;}
+.slides_container div {width:652px; display:block;}
+.slides_container div.slide {width:652px; display:block;}					
+.pagination {margin-left:635px; margin-top:3px; margin-bottom:18px;}
+.pagination li {float:left; margin:0 1px; list-style:none;}
+.pagination li a {display:block; width:12px; height:0; padding-top:12px; background-image:url(images/img_home/pagination.png); background-position:0 0; float:left; overflow:hidden;}
+.pagination li.current a {background-position:0 -12px;}
+.caption {font-family:Arial, Helvetica, sans-serif; background:none repeat scroll 0 0 rgba(0, 0, 0, 0.5); bottom:0; color:#FFFFFF; font-size:14px; height:32px; padding:10px 20px 0; position:absolute; text-shadow:none; width:540px; z-index:500;}
+</style>
+
+
+
+<script src="js/jquery.min.js"></script>
+<script>
+$(document).ready(function () {
+	if ($.isFunction(window.vje_init)) {
+	vje_init();
+	}
+});
+</script>
+
+<!-- Google Map -->
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+<style>
+      #map-canvas {
+        margin-top: 20px;
+        padding: 0;
+        height: 400px;
+      }
+
+      .InfoWindow {
+        margin-top: 8px;
+        background:#5DB1C9;
+        color:#FFF;
+        font-family:Arial, Helvetica, sans-serif;
+        font-size:12px;
+        padding: .5em 1em;
+        border-style:none;
+        -webkit-box-shadow: 0 0  8px #000;
+        box-shadow: 0 0 8px #000;
+    }
+
+    .stitre_txt_infobox{
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 18px;
+      font-weight: bold;
+      color: white;
+    }
+
+    .text_txt_infobox{
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 14px;
+      font-weight: normal;
+      color: white;
+      margin-top:10px;
+    }
+
+    .text_txt_infobox img {
+      margin-right:8px;
+      margin-top:3px;
+    }
+
+    .text_txt_infobox a {
+      color:white;
+    }
+
+    #horaires, #transport, #voiture{
+      float:left;
+      width:340px;
+      margin-top:20px;
+    }
+
+    .hint {
+      margin-left:20px;
+      margin-bottom:10px;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    #transport li,#voiture li, #horaires li, #voiture .GpsType {
+      margin-bottom:10px;
+    }
+
+    #voiture .GpsType {
+      font-weight: bold;
+    }
+
+    #horaires ul .header {
+      width:150px;
+      font-weight: bold;
+      display:inline-block;
+    }
+
+
+</style>
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+<script src="js/infobox_packed.js"></script>
+<script>
+  var map;
+  var myLatlng = new google.maps.LatLng(48.855484, 2.593394);
+  function initialize() {
+    var mapOptions = {
+      zoom: 17,
+      center: myLatlng, 
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    };
+    map = new google.maps.Map(document.getElementById('map-canvas'),
+        mapOptions);
+
+     var infowindow = new InfoBox({
+        content: document.getElementById("InfoWindowTemplate").innerHTML,
+         disableAutoPan: false,
+         maxWidth: 0,
+         alignBottom: true,
+         pixelOffset: new google.maps.Size(30, -30),
+         zIndex: null,
+         boxStyle: {
+            background: "",
+            opacity: 0.90,
+            width: "260px"
+        },
+        closeBoxMargin: "12px 4px 2px 2px",
+        closeBoxURL: "",
+        infoBoxClearance: new google.maps.Size(1, 1)
+    });
+
+    var marker = new google.maps.Marker({
+        position: myLatlng,
+        map: map,
+        visible: true,
+        //icon:"images/marker.png",
+        title: 'Véritable Jésus Eglise'
+    });
+
+    google.maps.event.addListener(marker, 'click', function() {
+      infowindow.open(map,marker);
+    });
+    infowindow.open(map,marker);
+  }
+
+ 
+
+  google.maps.event.addDomListener(window, 'load', initialize);
+  
+
+</script>
+<!-- Google Map -->
+
+<script src="js/bootstrap.min.js"></script>
+<script src="js/bootstrap-modal.js"></script>
+<script src="js/bootstrap-modalmanager.js"></script>
+
+</head>
+
+
+<body bgcolor="#e0e0e0">
+  <div id="InfoWindowTemplate" style="display: none">
+    <div id="InfoWindow" class="InfoWindow">
+      <ul>
+        <li class="stitre_txt_infobox">Véritable Jésus Eglise</li>
+        <li class="text_txt_infobox">1 rue des pinsons</li>
+        <li class="text_txt_infobox">77420 Champs-Sur-Marne</li>
+        <li class="text_txt_infobox">
+          <img src="images/email_icon.png"/>
+          <a href="mailto:paris@tjc.org">paris@tjc.org</a>
+        </li>
+        <li class="text_txt_infobox">
+          <img src="images/phone_icon.png"/>+33 1 64 68 79 95
+        </li>
+      </ul>
+    </div>
+  </div>
+<div id="content_header_centrer">
+<!------------------------------------------ header ------------------------------------------->
+
+
+<div id="bandeau_header_20" style="display:none">
+
+<div id="bandeau_header_20_cadre">
+<div id="header_vje">
+<div class="liens_header_vje"><a class="lien_header_vje" href="#">Contactez-nous</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a class="lien_header_vje" href="#">Trouver une Eglise</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a class="lien_header_vje" href="#">VJE au monde</a></div>
+</div>
+</div>
+
+</div> <!--bandeau_header_20-->
+
+
+<div id="header">
+<a href="index.html" target="_top"><img src="images/logo_vje.png" alt="Véritable Jésus Eglise" width="270" height="46" border="0" class="logo_vje" /></a>
+	<div id="header_langue" style="display:none">
+		<img src="images/icon_fr.png" width="20" height="20" border="0" class="icon_fr" />
+        <img src="images/icon_en.png" width="20" height="20" border="0" class="icon_en" />
+		<img src="images/icon_recherche.png" width="197" height="20" border="0" class="icon_recherche" />
+	</div>
+</div> <!--header-->
+
+
+<div id="bandeau_header_10">
+<div id="bandeau_header_10_cadre"></div>
+</div> <!--bandeau_header_10-->
+
+
+<div id="bandeau_header_40">
+
+<div id="bandeau_header_40_cadre">
+<div id="menu_header">
+	<ul>
+		<li class="TabMenuFirst TabMenu TabMenuHover">TROUVER NOTRE EGLISE</li>
+		<!--<li class="TabMenu TabMenuHover">SUIVRE JESUS-CHRIST</li>
+		<li class="TabMenu TabMenuHover">NOS TEMOIGNAGES</li>
+<a href="notreeglise.html" target="_top"><li class="TabMenu TabMenuHover">NOTRE EGLISE</li></a>
+<a href="aproposdenous.html" target="_top"><li class="TabMenu TabMenuHover">A PROPOS DE NOUS</li></a>-->
+	</ul>
+</div> <!--menu_header-->
+
+</div> <!--bandeau_header_40_cadre-->  
+
+</div> <!--bandeau_header_40--> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!------------------------------------------ contenu ------------------------------------------->
+<div id="map-canvas"></div>
+<div id="centrer">
+  
+  <div id="horaires">
+    <p class="titre_txt">Horaires</p>
+    <p class="hint">Tous les samedis</p>
+    <ul>
+      <li class="texte_txt">
+        <span class="header">10h45 à 11h00</span>
+        <span>Scéance de prière</span>
+      </li>
+      <li class="texte_txt">
+        <span class="header">11h00 à 12h15</span>
+        <span>Service du sabbath</span>
+      </li>
+      <li class="texte_txt">
+        <span class="header">12h15 à 13h45</span>
+        <span>Déjeuner</span>
+      </li>
+      <li class="texte_txt">
+        <span class="header">13h45 à 14h00</span>
+        <span>Scéance de prière</span>
+      </li>
+      <li class="texte_txt">
+        <span class="header">14h00 à 15h30</span>
+        <span>Service du sabbath</span>
+      </li>
+    </ul>
+  </div>
+  <div id="transport">
+    <p class="titre_txt">Venir par les transports</p>
+    <p class="hint">Rechercher un itinéraire</p>
+    <ul>
+      <li class="texte_txt"><a target="_blank" href="http://www.ratp.fr/itineraires/fr/ratp/resultat-detaille/start/Chatelet-Les+Halles+%28RER%29%2C+Paris/end/1%2C+Rue+des+Pinsons%2C+77420%2C+Champs-sur-Marne/">Depuis Paris</a></li>
+      <li class="texte_txt"><a target="_blank" href="http://www.ratp.fr/itineraires/fr/ratp/resultat-detaille/start/Aeroport+Charles+De+Gaulle+1+%28RER%29%2C+Tremblay-en-France/end/1%2C+Rue+des+Pinsons%2C+77420%2C+Champs-sur-Marne/">Depuis Aéroport charles de gaule 1</a></li>
+      <li class="texte_txt"><a target="_blank" href="http://www.ratp.fr/itineraires/fr/ratp/resultat-detaille/start/Aeroport+Charles+De+Gaulle+2+Tgv+%28RER%29%2C+Tremblay-en-France/end/1%2C+Rue+des+Pinsons%2C+77420%2C+Champs-sur-Marne/">Depuis Aéroport charles de gaule 2</a></li>
+      <li class="texte_txt"><a target="_blank" href="http://www.ratp.fr/itineraires/fr/ratp/resultat-detaille/start/A%C3%A9roport+d%27Orly+Ouest%2C+Paray-Vieille-Poste/end/1%2C+Rue+des+Pinsons%2C+77420%2C+Champs-sur-Marne">Depuis Aéroport d'Orly Ouest</a></li>
+      <li class="texte_txt"><a target="_blank" href="http://www.ratp.fr/itineraires/fr/ratp/resultat-detaille/start/A%C3%A9roport+d%27Orly+Sud%2C+Paray-Vieille-Poste/end/1%2C+Rue+des+Pinsons%2C+77420%2C+Champs-sur-Marne">Depuis Aéroport d'Orly Sud</a></li>
+      <!--<li class="texte_txt"><a>Utiliser la navette de l'église</a></li>-->
+    </ul>
+  </div>
+  <div id="voiture">
+    <p class="titre_txt">Venir en voiture</p>
+    <p class="hint">Itinéraires & localisation GPS</p>
+    <ul>
+      <li class="texte_txt">Rechercher un itinéraire <a target="_blank" href="http://www.viamichelin.fr/web/Itineraires?strDestLocid=34MTE1NHdtM2kxMTMxLjA0MndpNjEwNTRocjl6Y05EZ3VPRFU0TVRZPWNNaTQxT1RNMk9BPT1jTkRndU9EVTFOVGs9Y01pNDFPVE0xTnc9PWNORGd1T0RVMU5Uaz1jTWk0MU9UTTFOdz09MGZSdWUgZGVzIFBpbnNvbnM=&intItineraryType=1&caravaneHidden=false&vh=CAR&strVehicle=0&itineraryCarType=0&itineraryFuelType=0&isFavoriseAutoroute=false&isAvoidPeage=false&isAvoidVignette=false&isAvoidLNR=false&isAvoidFrontiers=false&dtmDeparture=15%2F06%2F2013&distance=km&devise=1.0|EUR&indemnite=&carbCost=1.6&autoConso=6.8&villeConso=6&routeConso=5.6">viamichelin.fr</a></li>
+      <li class="texte_txt">
+        <div class="GpsType">DD – GPS (lat x lon)</div>
+        <ul>
+          <li class="texte_txt">48.855484 x 2.593394</li>
+        </ul>
+      </li>
+      <li class="texte_txt">
+        <div class="GpsType">DMS – GPS (lat x lon)</div>
+        <ul>
+          <li class="texte_txt">N48° 51M 19.742S x E2° 35M 36.218S</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+  <!------------------------------------------ part_gauche ------------------------------------------->
+  <div id="part_gauche" style="display:none">
+  
+    <div id="slides">
+      <div class="slides_container">
+        <div class="slide"> <img src="images/img_home/img_slide1.jpg">
+          <div class="caption">
+            <p>Véritable Jésus Eglise Paris</p>
+          </div>
+        </div>
+        <div class="slide"> <img src="images/img_home/img_slide2.jpg">
+          <div class="caption">
+            <p>Véritable Jésus Eglise Paris</p>
+          </div>
+        </div>
+        <div class="slide"> <img src="images/img_home/img_slide3.jpg">
+          <div class="caption">
+            <p>Véritable Jésus Eglise Paris</p>
+          </div>
+        </div>
+        <div class="slide"> <img src="images/img_home/img_slide4.jpg">
+          <div class="caption">
+            <p>Véritable Jésus Eglise Paris</p>
+          </div>
+        </div>
+      </div>
+    </div> <!--slides-->
+    
+    <div id="bloc_actualites">
+      <p> <span class="fleche_titre"><img src="images/fleche_titre.png" /></span>
+      <p class="titre_txt">Suivre Jésus-Christ</p>
+      <p class="texte_txt"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Congue et velit. Proin pulvinar molestie consequat. <a href="#"><strong>[+]</strong></a></p>
+      <img src="images/pointilles.png" width="692" height="1" border="0" class="pointilles" />
+      <p></p>
+      <p> <span class="fleche_titre"><img src="images/fleche_titre.png" /></span>
+      <p class="titre_txt">Réflexion biblique du jour</p>
+      <p class="texte_txt"> Vestibulum magna lorem, feugiat ut dictum ac, aliquam vitae neque. Mauris id elit eget enim adipiscing laoreet. <a href="#"><strong>[+]</strong></a></p>
+      <img src="images/pointilles.png" width="692" height="1" border="0" class="pointilles" />
+      <p></p>
+      <p> <span class="fleche_titre"><img src="images/fleche_titre.png" /></span>
+      <p class="titre_txt">Pellentesque ultrices</p>
+      <p class="texte_txt"> Mauris id elit eget enim adipiscing laoreet nec vitae dolor, accumsan luctus elit iaculis vel. <a href="#"><strong>[+]</strong></a></p>
+      <p></p>
+    </div> <!--bloc_actualites-->
+ 
+</div> <!--part_gauche-->
+
+  <!------------------------------------------ part_droite ------------------------------------------->
+  <div id="part_droite" style="display:none"> 
+  <a href="#"><img src="images/bt_bapteme.jpg" width="270" height="70" alt="Baptême" border="0" class="bloc_droite" /></a> <a href="#"><img src="images/bt_saintesprit.jpg" width="270" height="70" alt="Saint Esprit" border="0" class="bloc_droite" /></a> <a href="#"><img src="images/bt_salut.jpg" width="270" height="70" alt="Salut" border="0" class="bloc_droite" /></a> <a href="#"><img src="images/bt_joursabbat.jpg" width="270" height="70" alt="Jour du Sabbat" border="0" class="bloc_droite" /></a>
+    <div id="part_droite_blocs"> <a href="lesactivitesdumois.html"><img src="images/bloc_activites.jpg" width="130" height="200" alt="Activités" border="0" class="bloc_droite_gauche" /></a> <a href="#"><img src="images/bloc_images.jpg" width="130" height="200" alt="Images" border="0" class="bloc_droite_droite" /></a> </div>
+  
+  </div> <!--part_droite-->
+  
+</div> <!--centrer-->
+
+</div> <!--content_header_centrer-->
+
+
+
+
+
+
+
+
+
+<!------------------------------------------ footer ------------------------------------------->
+
+<div id="footers">
+
+<div id="footers_cadre">
+
+<div id="footers_blocs">
+
+<div class="footers_icons" style="display:none">
+<span class="footers_txt_gauche">Suivez-nous :</span>
+
+<a href="#" target="_blank"><img src="images/icon_facebook_g.png" alt="Facebook" width="22" height="22" border="0" 
+onmouseover="this.src='images/icon_facebook.png'" onmouseout="this.src='images/icon_facebook_g.png'" class="icons_ftyp" /></a>
+<a href="#" target="_blank"><img src="images/icon_twitter_g.png" alt="Twitter" width="22" height="22" border="0" 
+onmouseover="this.src='images/icon_twitter.png'" onmouseout="this.src='images/icon_twitter_g.png'" class="icons_ftyp" /></a>
+<a href="#" target="_blank"><img src="images/icon_youtube_g.png" alt="Youtube" width="22" height="22" border="0" 
+onmouseover="this.src='images/icon_youtube.png'" onmouseout="this.src='images/icon_youtube_g.png'" class="icons_ftyp" /></a>
+<a href="#" target="_blank"><img src="images/icon_pinterest_g.png" alt="Pinterest" width="22" height="22" border="0" onmouseover="this.src='images/icon_pinterest.png'" onmouseout="this.src='images/icon_pinterest_g.png'" class="icons_ftyp" /></a>
+
+<span class="footers_txt_droite">Powered by <span style="color:#b2311b;">VJE Paris 巴黎真耶穌教會</span></span>
+</div> <!--footers_icons-->
+
+</div> <!--footers_blocs-->
+
+
+
+<p>
+© 2013 Véritable Jésus Eglise Paris. Tous droits réservés. 
+<!--| <a href="#" target="_self">Conditions et termes</a>  
+| <a href="#" target="_self">Politique de confidentialité</a> -->
+</p>
+
+<table style="display:none" width="100%" border="0" cellspacing="20" cellpadding="0" class="tab_footers">
+<tr>
+
+<td width="17%" valign="top">
+<a href="#" target="_self">
+<strong>TROUVER JESUS-CHRIST</strong></a><br /><br />
+<a href="#">
+Paix</a><br />
+<a href="#">
+Joie</a><br />
+<a href="#">
+Espoir</a><br />
+<a href="#">
+Amour</a><br />
+<a href="#">
+Contentement</a><br />
+<a href="#">
+Vérité</a><br />
+<a href="#">
+Salut</a>
+</td>
+
+<td class="separation" valign="top">&nbsp;</td>
+
+<td width="16%" valign="top">
+<a href="#">
+<strong>SUIVRE JESUS-CHRIST</strong></a><br /><br />
+<a href="#">
+Véritable Dieu</a><br />
+<a href="#">
+Jésus Christ</a><br />
+<a href="#">
+Sainte Bible</a><br />
+<a href="#">
+Eglise</a><br />
+<a href="#">
+Salut</a><br />
+<a href="#">
+Baptême</a><br />
+<a href="#">
+Saint Esprit</a><br />
+<a href="#">
+Sainte Cène</a><br />
+<a href="#">
+Jour du Sabbat</a><br />
+<a href="#">
+Jugement dernier</a>
+</td>
+
+<td class="separation" valign="top">&nbsp;</td>
+
+<td width="16%" valign="top">
+<a href="#">
+<strong>NOS TEMOIGNAGES</strong></a><br /><br />
+<a href="#">
+Recevoir Jésus</a><br />
+<a href="#">
+Guérison</a><br />
+<a href="#">
+Protection</a><br />
+<a href="#">
+Conseils</a><br />
+<a href="#">
+Révélation</a>
+</td>
+
+<td class="separation" valign="top">&nbsp;</td>
+
+<td width="16%" valign="top">
+<a href="#">
+<strong>NOTRE EGLISE</strong></a><br /><br />
+<a href="#">
+Histoire de l'Eglise</a><br />
+<a href="#">
+Fondements du Salut</a><br />
+<a href="#">
+Questions et Réponses</a><br />
+<a href="#">
+Trouver une Eglise</a>
+</td>
+
+<td class="separation" valign="top">&nbsp;</td>
+
+<td width="16%" valign="top">
+<a href="#">
+<strong>A PROPOS DE NOUS</strong></a><br /><br />
+<a href="#">
+Demande de publication</a><br />
+<a href="#">
+Audio</a><br />
+<a href="#">
+Video</a>
+</td>
+
+<td class="separation" valign="top">&nbsp;</td>
+
+<td width="16%" valign="top">
+<a href="#">
+<strong>CONTACTEZ-NOUS</strong></a><br />
+<a href="#">
+<strong>TROUVER UNE EGLISE</strong></a><br />
+<a href="#">
+<strong>VJE AU MONDE</strong></a><br />
+<br />
+<a href="#">
+<strong>BAPTEME</strong></a><br />
+<a href="#">
+<strong>SAINT ESPRIT</strong></a><br />
+<a href="#">
+<strong>SALUT</strong></a><br />
+<a href="#">
+<strong>LE JOUR DE SABBAT</strong></a>
+</td>
+
+</tr>
+</table>
+
+</div><!--footer_cadre-->
+
+</div><!--footer-->
+
+
+
+
+</body>
+
+
+<script src="js/slides.min.jquery.js"></script>
+<script>
+function vje_init() {
+	$("#slides").slides({
+		play: 5000,
+		pause: 3000,
+		hoverPause: true,
+	});
+}
+</script>﻿
+
+</html>
