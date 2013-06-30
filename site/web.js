@@ -2,12 +2,29 @@ var path = require('path');
 var express = require('express');
 var app = express();
 
-app.use("/css", express.static(__dirname + '/css'));
-app.use("/images", express.static(__dirname + '/images'));
-app.use("/js", express.static(__dirname + '/js'));
+var texts = {
+	"en":{
+		"hello":"hello"
+	},
+	"fr":{
+		"hello":"bonjour"
+	}
+}
 
-app.get('/', function(req,res) {
-    res.render('trouver_notre_eglise.ejs');
+app.configure(function()
+{
+
+	app.use("/css", express.static(__dirname + '/css'));
+	app.use("/images", express.static(__dirname + '/images'));
+	app.use("/js", express.static(__dirname + '/js'));
+
+	app.get('/', function(req,res) {
+	    res.render('trouver_notre_eglise.ejs', texts["fr"]);
+	});
+
+	app.get('/:locale', function(req,res) {
+	    res.render('trouver_notre_eglise.ejs', texts[req.params.locale]);
+	});
 });
 
 var port = process.env.PORT || 5000;
