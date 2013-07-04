@@ -17,6 +17,8 @@ app.configure(function()
 	app.use("/css", express.static(__dirname + '/css'));
 	app.use("/images", express.static(__dirname + '/images'));
 	app.use("/js", express.static(__dirname + '/js'));
+	app.use(express.static(__dirname + '/public'));
+	
 
 	app.get('/', function(req,res) {
 	    res.render('trouver_notre_eglise.ejs', texts["fr"]);
